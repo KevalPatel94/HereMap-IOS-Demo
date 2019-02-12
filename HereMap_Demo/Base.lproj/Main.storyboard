@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="alF-nU-xCZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Here Map-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HereMap_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7P-jR-PMQ" customClass="NMAMapView">
+                                <rect key="frame" x="0.0" y="98" width="375" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J7P-jR-PMQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0zY-Vt-b9F"/>
+                            <constraint firstItem="J7P-jR-PMQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Idm-Br-sBw"/>
+                            <constraint firstItem="J7P-jR-PMQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kYX-07-jTN"/>
+                            <constraint firstItem="J7P-jR-PMQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yBH-7J-TrE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Here Map" prompt="Tap to add Marker" id="Lu1-y7-Rsr"/>
+                    <connections>
+                        <outlet property="mapView" destination="J7P-jR-PMQ" id="HXd-oN-1cF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.2" y="133.5832083958021"/>
+        </scene>
+        <!--Here Map-->
+        <scene sceneID="PSm-sJ-uLa">
+            <objects>
+                <viewController storyboardIdentifier="VC2" id="Y1F-ij-cwB" customClass="VC2" customModule="HereMap_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgY-FC-Vqu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gil-b4-FbD" customClass="NMAMapView">
+                                <rect key="frame" x="0.0" y="98" width="375" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gil-b4-FbD" firstAttribute="trailing" secondItem="wIr-dj-8Ra" secondAttribute="trailing" id="LGk-80-6Ec"/>
+                            <constraint firstItem="gil-b4-FbD" firstAttribute="leading" secondItem="wIr-dj-8Ra" secondAttribute="leading" id="dTo-P4-dx0"/>
+                            <constraint firstItem="gil-b4-FbD" firstAttribute="bottom" secondItem="wIr-dj-8Ra" secondAttribute="bottom" id="kHG-tU-GYh"/>
+                            <constraint firstItem="gil-b4-FbD" firstAttribute="top" secondItem="wIr-dj-8Ra" secondAttribute="top" id="xHs-5X-o96"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wIr-dj-8Ra"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Here Map" prompt="Draw Route" id="qKZ-h6-L5W"/>
+                    <connections>
+                        <outlet property="mapView" destination="gil-b4-FbD" id="jLR-X1-bb3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nV1-Xq-2h1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015" y="887"/>
+        </scene>
+        <!--Add Markers-->
+        <scene sceneID="S8T-ho-fxr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nGl-6P-mOm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Markers" id="a1D-HU-Ssb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tam-rn-JfG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9eZ-az-av9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DaN-cy-qte" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QBb-1J-gPu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="alF-nU-xCZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wek-ZS-AK7">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nGl-6P-mOm" kind="relationship" relationship="viewControllers" id="tqy-kl-RGA"/>
+                        <segue destination="zKY-13-git" kind="relationship" relationship="viewControllers" id="Lk3-WP-cJg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GwD-mx-O1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Routing-->
+        <scene sceneID="Qt8-QQ-boL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zKY-13-git" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Routing" id="B8g-px-ELP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="485-Sy-6qW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y1F-ij-cwB" kind="relationship" relationship="rootViewController" id="frH-K0-yZ2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GgA-qZ-Fcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="887"/>
+        </scene>
+    </scenes>
+</document>

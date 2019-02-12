@@ -1,0 +1,6 @@
+framework module Pods_HereMap_Demo {
+  umbrella header "Pods-HereMap_Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
